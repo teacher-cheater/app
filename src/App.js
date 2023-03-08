@@ -8,7 +8,6 @@ function App() {
   const [allEmoji, setAllEmoji] = useState([]);
   console.log(data);
 
-  const [filter, setFilter] = useState("");
 
   const [cardsPerPage] = useState(12);
   const [currentPage, setCurrentPage] = useState(1);
@@ -22,8 +21,6 @@ function App() {
   }
 
   console.log(currentCards);
-
-  let url = 'https://63f4e22355677ef68bc5fb32.mockapi.io/emoji';
 
   useEffect(() => {
     //fetch(url)
@@ -99,7 +96,7 @@ function App() {
         <ul>
           {arrNumber.map((page, index) => (
             <li key={index} onClick={() => paginate(page)}>
-              <a href="!#">{page}</a>
+              <a href="#!">{page}</a>
             </li>
           ))}
         </ul>
